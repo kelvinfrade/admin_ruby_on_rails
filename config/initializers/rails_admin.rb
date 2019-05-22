@@ -4,7 +4,7 @@ RailsAdmin.config do |config|
   RailsAdmin::Config::Actions.register(RailsAdmin::Config::Actions::Pdf)
 
   ### Popular gems integration
-
+  
   ## == Devise ==
   config.authenticate_with do
     warden.authenticate! scope: :user
