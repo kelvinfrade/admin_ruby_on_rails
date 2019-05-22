@@ -117,6 +117,7 @@ RailsAdmin.config do |config|
 
 
   config.model Discount do
+    navigation_icon 'fa fa-percent'
     parent Product
   end
 
@@ -129,6 +130,10 @@ RailsAdmin.config do |config|
     navigation_icon 'fa fa-dollar'
     parent User
     weight -1
+  end
+
+  config.model User do
+    navigation_icon 'fa fa-male'
   end
 
   config.model Client do

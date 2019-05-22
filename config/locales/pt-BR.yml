@@ -29,6 +29,9 @@ pt-BR:
         name: "Nome"
         company_name: "Nome da Empresa"
         document: "Nº Documento"
+        phone: "Telefone"
+        notes: "Observação"
+        address: "Endereço"
   views:
   admin:
     home:
