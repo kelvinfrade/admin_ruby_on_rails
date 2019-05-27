@@ -2,9 +2,11 @@ class Sale < ApplicationRecord
   belongs_to :client
   belongs_to :user
   belongs_to :discount
+  #has_one  :sale_tota
   has_many :product_quantities
   has_one :comission
-  
+ 
+
   after_save do
     calc = 0
     # Soma o preço dos produtos vezes a quantidade deles
@@ -17,7 +19,7 @@ class Sale < ApplicationRecord
         calc -= self.discount.value
       end
     end
- 
+    Sale.create(sale_tota: calc)
     # Verifica se já existe uma comissão, caso sim atualiza, caso não cria uma nova.
     if self.comission.present?
       self.comission.update(value: (calc * 0.1), status: :pending)

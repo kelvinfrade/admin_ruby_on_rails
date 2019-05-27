@@ -32,7 +32,7 @@ RailsAdmin.config do |config|
   }
   config.navigation_static_label = "Lins Úteis"
 
-  config.main_app_name = ["Representantes Comerciais", ""]
+  config.main_app_name = ["Sistema de Gestão Comercial", ""]
 
   config.model Sale do
     navigation_icon 'fa fa-money'
@@ -42,6 +42,7 @@ RailsAdmin.config do |config|
       field  :discount
       field  :notes
       field  :product_quantities
+      #field  :sale_tota
 
       field :user_id, :hidden do
         default_value do
@@ -56,6 +57,7 @@ RailsAdmin.config do |config|
       field  :discount
       field  :notes
       field  :product_quantities
+      #field  :sale_tota
 
       field :user_id, :hidden do
         default_value do
@@ -115,6 +117,9 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Product do
+    navigation_icon 'fa fa-inbox'
+  end
 
   config.model Discount do
     navigation_icon 'fa fa-percent'
@@ -133,7 +138,7 @@ RailsAdmin.config do |config|
   end
 
   config.model User do
-    navigation_icon 'fa fa-male'
+    navigation_icon 'fa fa-user'
   end
 
   config.model Client do

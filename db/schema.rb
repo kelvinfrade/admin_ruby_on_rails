@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_21_170320) do
+ActiveRecord::Schema.define(version: 2019_05_27_135919) do
 
   create_table "addresses", force: :cascade do |t|
     t.string "country"
@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(version: 2019_05_21_170320) do
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "sale_tota"
     t.index ["client_id"], name: "index_sales_on_client_id"
     t.index ["discount_id"], name: "index_sales_on_discount_id"
     t.index ["user_id"], name: "index_sales_on_user_id"
